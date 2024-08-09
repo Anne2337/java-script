@@ -43,23 +43,23 @@
 //}
 
 
-const decreasebtn=document.getElementById("decreasebtn");
-const increasebtn=document.getElementById("increasebtn");
-const resetbt=document.getElementById("resetbt");
-const count=document.getElementById("count");
-let count1=0;
-increasebtn.onclick=function(){
-    count1++;
-    count.textContent=count1;
-}
-decreasebtn.onclick=function(){
-    count1--;
-    count.textContent=count1;
-}
-resetbt.onclick=function(){
-    count1=0;
-    count.textContent=count1;
-}
+//const decreasebtn=document.getElementById("decreasebtn");
+//const increasebtn=document.getElementById("increasebtn");
+//const resetbt=document.getElementById("resetbt");
+//const count=document.getElementById("count");
+//let count1=0;
+//increasebtn.onclick=function(){
+    //count1++;
+    //count.textContent=count1;
+//}
+//decreasebtn.onclick=function(){
+   // count1--;
+    //count.textContent=count1;
+//}
+//resetbt.onclick=function(){
+   // count1=0;
+   // count.textContent=count1;
+//}
 
 
 // math= built -in objects
@@ -67,3 +67,31 @@ resetbt.onclick=function(){
 //let z;
 //z=Math.sqrt(x);
 //console.log(z);
+
+const mastercard=document.getElementById("masterbtn");
+const paypal=document.getElementById("paypal");
+const mycheck=document.getElementById("check");
+const submit=document.getElementById("sumit");
+const result=document.getElementById("subresult");
+const payment=document.getElementById("paymentresult");
+
+submit.onclick=function(){
+    if(mycheck.checked){
+        result.textContent='you are subcribed!..';
+
+    }
+    else{
+        result.textContent="you are not subcribed";
+    }
+    if(paypal.checked){
+        payment.textContent="you are paying with paypal!...";
+    }
+    else if(mastercard.checked){
+        payment.textContent="you are paying with mastercard!...";
+
+
+    }
+    else{
+        payment.textContent="you must select payment method";
+    }
+}
