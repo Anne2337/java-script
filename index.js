@@ -131,29 +131,92 @@
        // console.log(`${day} this day is not exist`);
     //}
 
-    const textbox=document.getElementById("textbox");
-    const fargheigt=document.getElementById("fargheigt");
-    const celsius=document.getElementById("celsius");
-    const result=document.getElementById("result");
-     let temp;
+    //const textbox=document.getElementById("textbox");
+    //const fargheigt=document.getElementById("fargheigt");
+    //const celsius=document.getElementById("celsius");
+    //const result=document.getElementById("result");
+     //let temp;
 
 
     
 
- function convert(){
-    if(fargheigt.checked){
-       temp= Number(textbox.value);
-       temp= temp * 9 / 5 + 32;
-       result.textContent= temp + "°F";
-    }
-    else if (celsius.checked){
-        temp= Number(textbox.value);
-       temp= (temp-32)*(5/9);
-       result.textContent= temp + "°c";
+ //function convert(){
+   // if(fargheigt.checked){
+      // temp= Number(textbox.value);
+      // temp= temp * 9 / 5 + 32;
+      // result.textContent= temp + "°F";
+   // }
+    //else if (celsius.checked){
+       // temp= Number(textbox.value);
+      // temp= (temp-32)*(5/9);
+      // result.textContent= temp + "°c";
         
-          }
-          else{
-            result.textContent="you select unit";
-          }
+         // }
+         // else{
+           // result.textContent="you select unit";
+          //}
+
+ //}
+
+
+ // .filter
+ //let numbers=[1,2,3,4,5,6,7]
+ //let evenNumbs= numbers.filter(isEven);
+ //console.log(evenNumbs)
+ //function isEven(Element){
+   //return  Element%2 ===0;
+ //}
+
+ //function isOdd(Element){
+   // return Element%2 !==0;
+ //}
+
+
+ // object in javascripts and the use this 
+
+ //const person1 ={
+    //firstname:"Anne",
+    //lastname: "TUYISHIME",
+    //age:24,
+    //isEmployed:true,
+ 
+ //sayHello: function(){console.log(`hi !I am ${this.firstname}` )}
+ //}
+ //person1.sayHello();
+
+ // constructors
+
+// function Car(make, model,year,color){
+    //this.make=make,
+    //this.model=model,
+    //this.year=year,
+    //this.color=color
+   // this.drive= function(){console.log(`you drive ${model}`)}
+ //}
+ //const car1=new Car("make","toyota","2024","black");
+ //car1.drive();
+
+ //class
+
+ class product{
+    constructor(name,price){
+        this.name=name,
+        this.price=price
+    }
+    displayproduct(){
+        console.log(`product'name: ${this.name}`);
+        console.log(`product'price: ${this.price}`)
+    }
+    calculateTotal(salestax){
+        return this.price + (this.price *salestax);
+    }
 
  }
+
+ const salestax = 0.05;
+ const product1= new product("shoes",20000);
+ product1.displayproduct();
+ product1.calculateTotal();
+
+ const total=product1.calculateTotal(salestax);
+ console.log(`the total is (with tax): $${total.toFixed(2)}`)
