@@ -198,25 +198,40 @@
 
  //class
 
- class product{
-    constructor(name,price){
-        this.name=name,
-        this.price=price
-    }
-    displayproduct(){
-        console.log(`product'name: ${this.name}`);
-        console.log(`product'price: ${this.price}`)
-    }
-    calculateTotal(salestax){
-        return this.price + (this.price *salestax);
-    }
+ //class product{
+    //constructor(name,price){
+        //this.name=name,
+       // this.price=price
+    //}
+    //displayproduct(){
+        //console.log(`product'name: ${this.name}`);
+        //console.log(`product'price: ${this.price}`)
+    //}
+    //calculateTotal(salestax){
+       // return this.price + (this.price *salestax);
+   // }
 
- }
+ //}
 
- const salestax = 0.05;
- const product1= new product("shoes",20000);
- product1.displayproduct();
- product1.calculateTotal();
+ //const salestax = 0.05;
+ //const product1= new product("shoes",20000);
+ //product1.displayproduct();
+ //product1.calculateTotal();
 
- const total=product1.calculateTotal(salestax);
- console.log(`the total is (with tax): $${total.toFixed(2)}`)
+ //const total=product1.calculateTotal(salestax);
+ //console.log(`the total is (with tax): $${total.toFixed(2)}`)
+
+
+
+ // JavaScript code in index.js
+
+// JavaScript code in index.js
+
+document.getElementById("button1").addEventListener("click", function() {
+    // Show the delete section
+    document.querySelector(".delete-section").style.display = "block";
+    
+    // You can also disable the ADD button to prevent multiple clicks if needed
+    document.getElementById("button1").disabled = true;
+});
+
